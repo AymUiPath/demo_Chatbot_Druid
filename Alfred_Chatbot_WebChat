@@ -1,17 +1,32 @@
 
-        <!DOCTYPE html>
-        <html>
+<!doctype html>
+
+
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Your website html</title>
-    <!-- Include the css file   -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--DRUID CSS START -->
     <link defer href="https://prod-druid-apc.azureedge.net/druid_webchat.css" rel="stylesheet">
- </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--DRUID CSS END -->
+    <!--DRUID CSS CUSTOM START -->
+
+    <!--DRUID CSS CUSTOM END -->
+
+
+    <title>DRUID Chatbot</title>
+
+</head>
+
 <body>
-     …
-     … 
-    <!-- Include the script file   -->
-    <script defer type="text/javascript" src="https://prod-druid-apc.azureedge.net/druid_webchat.js"></script>
+
+        <!-- DRUID Snippet START -->
+        <script defer type="text/javascript" src="https://prod-druid-apc.azureedge.net/druid_webchat.js"></script>
 
     <!-- Init the webchat component on document load -->
     <script type="text/javascript">
@@ -19,13 +34,49 @@
             DruidWebchat.init({
                 <!-- Common settings  -->
                 botId: "65978d4a-d4dc-42c8-4094-08d90ae844a1",
-                baseUrl: "https://prod-druid-api.azurewebsites.net",    
-                queryParams: "", // pass queryParams to AuthorizeAsync method
+                baseUrl: "https://prod-druid-api.azurewebsites.net",   
+					conversationTokenEnabled: true,
+					druidWebChatIsOpenedEnabled: true,
+					backgroundTrafficEnabled: true,
+					notificationsEnabled: true,
+					enableWebsocket: false,
+					druidShowGroupTimestamp: 10000,
+					serviceNetworkStatusEnabled: true,
+					extendedLocalizedString: {
+					  timeSent: ' - %1',
+					  suggestedActionsInputPlaceholder: ''},				
                 UI: {
-                    containerElement: null, // [MANDATORY] example: document.getElementById('druidContainerElement') -> specify the webchat expand DOM element
-                }
+        "position": "right",
+        "height": "85vh",
+        "width": "500px",
+        "minWidth": "25vw",
+        "chatTitle": " Webchat",
+        "chatTitle_faIcon": "",
+        "floatRight": "",
+        "expandWidth": "unset",
+        "druidLayoutVersionDecorator": "druid-v2",
+        "goBackButton": false,
+        "chatHeaderHeight": "54px",
+        "inputPlaceholder": "Type your message here...",
+        "typingMessageBackground": null,
+        "containerElement": null,
+        "iconSendSvgType": 2,
+        "inputIconsAlignment": "right",
+        "visibleAtScrollTop": false,
+        "iconCloseChat": "fa-angle-down",
+        "contextMenuIcon": "fa-plus-square",
+        "autoExpandEnabled": true,
+        "fullScreenMode": true,
+        "fullScreenMode_leftRightClass": "",
+        "fullScreenMode_mainChatClass": "col-md-12",
+        "useSingleCarouselForMultiCarousel": true,
+        "resize": "none",
+        "loadingOverlayActive": false                     
+                    }
         });
         });
     </script>
+        <!-- DRUID Snipet END-->
 </body>
+
 </html>
